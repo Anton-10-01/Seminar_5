@@ -19,7 +19,12 @@ void PrintArrayDouble(double[] arr, int round) {
         if (i < arr.Length - 1) Console.Write($"{num}, ");
         else Console.Write($"{num}");
     }
-    Console.Write("] -> ");
+    Console.Write("] => ");
+
+    Console.Write($"{MaxElement(arr)} - {MinElement(arr)} = ");
+
+    double result = DifferenceElement(MaxElement(arr), MinElement(arr));
+    Console.WriteLine(Math.Round(result, 1));
 }
 
 
@@ -48,8 +53,6 @@ double DifferenceElement(double max, double min) {
     return diff;
 }
 
-double[] array = CreateArrayRndDouble(4, 1, 10);
-PrintArrayDouble(array, 1);
+double[] array = CreateArrayRndDouble(5, 1, 10);
 
-double result = DifferenceElement(MaxElement(array), MinElement(array));
-Console.WriteLine(Math.Round(result, 1));
+PrintArrayDouble(array, 1);
