@@ -18,7 +18,7 @@ void PrintArray(int[] arr) {
         if (i < arr.Length - 1) Console.Write($"{arr[i]}, ");
         else Console.Write($"{arr[i]}");
     }
-    Console.WriteLine("]");
+    Console.Write("] -> ");
 }
 
 int QuantityEvenNum(int[] arr) {
