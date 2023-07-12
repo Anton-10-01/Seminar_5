@@ -25,7 +25,7 @@ double[] CreateArrayRndDouble(int size, int min, int max) {
 void PrintArrayDouble(double[] arr, int round) {
     Console.Write("[");
     for (int i = 0; i < arr.Length; i++) {
-        double num = Math.Raund(arr[i], round);
+        double num = Math.Round(arr[i], round);
         if (i < arr.Length - 1) Console.Write($"{num}, ");
         else Console.Write($"{num}");
     }
