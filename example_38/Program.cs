@@ -24,7 +24,7 @@ void PrintArrayDouble(double[] arr, int round) {
     Console.Write($"{MaxElement(arr)} - {MinElement(arr)} = ");
 
     double result = DifferenceElement(MaxElement(arr), MinElement(arr));
-    Console.WriteLine(Math.Round(result, 1));
+    Console.WriteLine(Math.Round(result, round));
 }
 
 
