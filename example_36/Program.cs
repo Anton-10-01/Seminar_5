@@ -13,6 +13,25 @@ int[] CreateArrayRndInt(int size, int min, int max) {
     return arr;
 }
 
+double[] CreateArrayRndDouble(int size, int min, int max) {
+    double[] arr = new double[size];
+    Random rnd = new Random();
+    for (int i = 0; i < size; i++) {
+        arr[i] = rnd.NextDouble() * (max - min) + min;
+    }
+    return arr;
+}
+
+void PrintArrayDouble(double[] arr, int round) {
+    Console.Write("[");
+    for (int i = 0; i < arr.Length; i++) {
+        double num = Math.Raund(arr[i], round);
+        if (i < arr.Length - 1) Console.Write($"{num}, ");
+        else Console.Write($"{num}");
+    }
+    Console.Write("] -> ");
+}
+
 void PrintArray(int[] arr) {
     Console.Write("[");
     for (int i = 0; i < arr.Length; i++) {
