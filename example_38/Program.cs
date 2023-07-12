@@ -21,10 +21,8 @@ void PrintArrayDouble(double[] arr, int round) {
     }
     Console.Write("] => ");
 
-    Console.Write($"{MaxElement(arr)} - {MinElement(arr)} = ");
-
     double result = DifferenceElement(MaxElement(arr), MinElement(arr));
-    Console.WriteLine(Math.Round(result, round));
+    Console.Write($"{MaxElement(arr)} - {MinElement(arr)} = {result}");
 }
 
 
@@ -48,9 +46,9 @@ double MinElement(double[] arr, int round = 1) {
     return Math.Round(min, round);
 }
 
-double DifferenceElement(double max, double min) {
+double DifferenceElement(double max, double min, int round = 1) {
     double diff = max - min;
-    return diff;
+    return Math.Round(diff, round);
 }
 
 double[] array = CreateArrayRndDouble(5, 1, 10);
